@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ml_optimizer_agent</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">ml_optimizer_agent</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5Cthesis%5Cthesis%201%5Cproduction_backend%5Cml_optimizer_agent.py">d:\thesis\thesis 1\production_backend\ml_optimizer_agent.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="ml_optimizer_agent.html#DistributionOptimizerAgent">DistributionOptimizerAgent</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="DistributionOptimizerAgent">class <strong>DistributionOptimizerAgent</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#DistributionOptimizerAgent">DistributionOptimizerAgent</a>(cluster_manager)<br>
+&nbsp;<br>
+Optimizes&nbsp;distribution&nbsp;based&nbsp;on&nbsp;predicted&nbsp;demand&nbsp;and&nbsp;constraints.<br>
+Ref:&nbsp;Walkthrough&nbsp;-&nbsp;Optimization&nbsp;Layer&nbsp;(DOA)<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="DistributionOptimizerAgent-__init__"><strong>__init__</strong></a>(self, cluster_manager)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="DistributionOptimizerAgent-optimize_distribution"><strong>optimize_distribution</strong></a>(
+    self,
+    predictions_df,
+    total_ip_pairs,
+    pack_size=12,
+    product_price=None
+)</dt><dd><span class="code">Allocates&nbsp;packs&nbsp;to&nbsp;clusters&nbsp;to&nbsp;match&nbsp;predicted&nbsp;demand&nbsp;while&nbsp;respecting&nbsp;symmetry.<br>
+constraints:<br>
+1.&nbsp;Total&nbsp;Packs&nbsp;&lt;=&nbsp;IP&nbsp;/&nbsp;12<br>
+2.&nbsp;Cluster&nbsp;Packs&nbsp;=&nbsp;k&nbsp;*&nbsp;StoreCount&nbsp;(Symmetry)<br>
+3.&nbsp;k&nbsp;&lt;=&nbsp;Max&nbsp;Cap&nbsp;(Dynamic&nbsp;based&nbsp;on&nbsp;Price)</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

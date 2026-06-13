@@ -1,0 +1,85 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+pip-log.txt
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.env/
+
+# ========================
+# Large Data Files (excluded due to size/confidentiality)
+# ========================
+Production_Backend/data/*.xlsx
+Production_Backend/data/*.csv
+Production_Backend/data/*.xls
+
+# Model Artifacts (too large for GitHub — ~237 MB)
+Production_Backend/model_artifacts/*.pkl
+Production_Backend/model_artifacts/*.joblib
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ========================
+# Next.js / Node
+# ========================
+initial_push/node_modules/
+initial_push/.next/
+initial_push/out/
+initial_push/.turbo/
+initial_push/coverage/
+initial_push/.pnp
+initial_push/.pnp.js
+*.tsbuildinfo
+next-env.d.ts
+
+# ========================
+# Logs
+# ========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ========================
+# OS
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# Editor / IDE
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+.gemini/
+
+# ========================
+# Misc Build / Cache
+# ========================
+Production_Backend/__pycache__/
+Production_Backend/graphify-out/cache/
+*.pkl

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module ml_forecast_agent</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">ml_forecast_agent</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5Cthesis%5Cthesis%201%5Cproduction_backend%5Cml_forecast_agent.py">d:\thesis\thesis 1\production_backend\ml_forecast_agent.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="joblib.html">joblib</a><br>
+<a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+<a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="ml_forecast_agent.html#DemandForecastAgent">DemandForecastAgent</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="DemandForecastAgent">class <strong>DemandForecastAgent</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#DemandForecastAgent">DemandForecastAgent</a>(data_files=None)<br>
+&nbsp;<br>
+Uses&nbsp;Random&nbsp;Forest&nbsp;to&nbsp;predict&nbsp;demand&nbsp;(Net&nbsp;Sale&nbsp;Qty)&nbsp;based&nbsp;on&nbsp;product&nbsp;attributes.<br>
+Ref:&nbsp;Walkthrough&nbsp;-&nbsp;Prediction&nbsp;Layer&nbsp;(DFA)<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="DemandForecastAgent-__init__"><strong>__init__</strong></a>(self, data_files=None)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="DemandForecastAgent-load_model"><strong>load_model</strong></a>(self, filepath)</dt><dd><span class="code">Loads&nbsp;a&nbsp;trained&nbsp;model&nbsp;and&nbsp;artifacts&nbsp;from&nbsp;disk.</span></dd></dl>
+
+<dl><dt><a name="DemandForecastAgent-predict_demand"><strong>predict_demand</strong></a>(self, plan_data)</dt><dd><span class="code">Predicts&nbsp;demand&nbsp;for&nbsp;new&nbsp;plan&nbsp;items&nbsp;using&nbsp;enhanced&nbsp;feature&nbsp;set.<br>
+plan_data:&nbsp;DataFrame&nbsp;with&nbsp;columns&nbsp;['Article',&nbsp;'Color',&nbsp;'Category',&nbsp;'Price'&nbsp;OR&nbsp;'Price_Range']</span></dd></dl>
+
+<dl><dt><a name="DemandForecastAgent-prepare_data"><strong>prepare_data</strong></a>(self)</dt><dd><span class="code">Prepares&nbsp;training&nbsp;data&nbsp;from&nbsp;historical&nbsp;seasonal&nbsp;files.</span></dd></dl>
+
+<dl><dt><a name="DemandForecastAgent-save_model"><strong>save_model</strong></a>(self, filepath)</dt><dd><span class="code">Saves&nbsp;the&nbsp;trained&nbsp;model&nbsp;and&nbsp;artifacts&nbsp;to&nbsp;disk.</span></dd></dl>
+
+<dl><dt><a name="DemandForecastAgent-train"><strong>train</strong></a>(self)</dt><dd><span class="code">Trains&nbsp;the&nbsp;Random&nbsp;Forest&nbsp;Model.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="DemandForecastAgent-get_price_range"><strong>get_price_range</strong></a>(price)</dt><dd><span class="code">Maps&nbsp;price&nbsp;to&nbsp;granular&nbsp;bracket&nbsp;ranges.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
