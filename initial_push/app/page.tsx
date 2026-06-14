@@ -8,6 +8,18 @@ export default function Home() {
   const [completeProducts, setCompleteProducts] = useState([]);
   const [brokenProducts, setBrokenProducts] = useState([]);
 
+  const safeJson = async (res: Response): Promise<unknown[]> => {
+    const text = await res.text();
+    if (!text || text.trim() === "") return [];
+    try {
+      const parsed = JSON.parse(text);
+      return Array.isArray(parsed) ? parsed : [parsed];
+    } catch {
+      console.warn("safeJson: could not parse response body:", text.slice(0, 200));
+      return [];
+    }
+  };
+
   const fetchAndDisplayProducts = async () => {
     try {
       const [completeRes, brokenRes] = await Promise.all([
@@ -16,8 +28,8 @@ export default function Home() {
       ]);
 
       const [completeData, brokenData] = await Promise.all([
-        completeRes.json(),
-        brokenRes.json()
+        safeJson(completeRes),
+        safeJson(brokenRes)
       ]);
 
       setCompleteProducts(completeData);
